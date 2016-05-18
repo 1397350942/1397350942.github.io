@@ -229,6 +229,245 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/18/hexo搭建方案（一）/" itemprop="url">
+                  hexo搭建方案（一）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-18T08:30:01+08:00" content="2016-05-18">
+              2016-05-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/18/hexo搭建方案（一）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/18/hexo搭建方案（一）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h1><h2 id="安装nvm（Node-Version-Manager），Terminal中运行"><a href="#安装nvm（Node-Version-Manager），Terminal中运行" class="headerlink" title="安装nvm（Node Version Manager），Terminal中运行"></a>安装nvm（Node Version Manager），Terminal中运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh | sh</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>会提示：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=&gt; Close and reopen your terminal to start using NVM</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>退出Terminal重启后nvm命令才能生效。假如update失败，可能没有profile文件，touch一下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch ~/.bash_profile</span><br><span class="line">touch ~/.profile</span><br></pre></td></tr></table></figure>
+<h2 id="使用nvm安装node-js："><a href="#使用nvm安装node-js：" class="headerlink" title="使用nvm安装node.js："></a>使用nvm安装node.js：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install 0.10</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>下完后安装hexo，这一步时间比较长：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h2 id="然后找个文件初始化blog："><a href="#然后找个文件初始化blog：" class="headerlink" title="然后找个文件初始化blog："></a>然后找个文件初始化blog：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/git/blog  </span><br><span class="line">hexo init .</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<h3 id="update-更新hexo2版本后安装还需要执行："><a href="#update-更新hexo2版本后安装还需要执行：" class="headerlink" title="[update]更新hexo2版本后安装还需要执行："></a>[update]更新hexo2版本后安装还需要执行：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-renderer-ejs --save</span><br><span class="line">$ npm install hexo-renderer-stylus --save</span><br><span class="line">$ npm install hexo-renderer-marked --save</span><br></pre></td></tr></table></figure>
+<h3 id="生成出的目录结构："><a href="#生成出的目录结构：" class="headerlink" title="生成出的目录结构："></a>生成出的目录结构：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<h2 id="新建一篇文章："><a href="#新建一篇文章：" class="headerlink" title="新建一篇文章："></a>新建一篇文章：</h2><blockquote>
+<p>hexo new mac下使用hexo搭建blog</p>
+<h2 id="open-source-posts-mac下使用hexo搭建blog-md"><a href="#open-source-posts-mac下使用hexo搭建blog-md" class="headerlink" title="open source/_posts/mac下使用hexo搭建blog.md"></a>open source/_posts/mac下使用hexo搭建blog.md</h2></blockquote>
+<h2 id="编辑md后生成html："><a href="#编辑md后生成html：" class="headerlink" title="编辑md后生成html："></a>编辑md后生成html：</h2><p>$ hexo generate<br>本地预览：<br>$ hexo server<br>=&gt; [info] Hexo is running at localhost:4000/. Press Ctrl+C to stop.</p>
+<h1 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h1><p>github上建个respository，设置里设一下<br>在_config.yml中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: github</span><br><span class="line">repository: https://github.com/sunnyxx/blog-hexo.git</span><br></pre></td></tr></table></figure>
+<p>然后执行：<br>$ hexo deploy</p>
+<p>就行了，github会多一个branch，比octopress简单</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/06/配置Node-js开发环境-使用Atom实践/" itemprop="url">
+                  配置Node.js开发环境--使用Atom实践
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-06T12:06:05+08:00" content="2016-05-06">
+              2016-05-06
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/06/配置Node-js开发环境-使用Atom实践/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/06/配置Node-js开发环境-使用Atom实践/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="安装完-Atom-后需要安装一些插件"><a href="#安装完-Atom-后需要安装一些插件" class="headerlink" title="安装完 Atom 后需要安装一些插件"></a>安装完 Atom 后需要安装一些插件</h1><blockquote>
+<p>Atom 自己去官方下载安装即可</p>
+<ul>
+<li>atom-ternjs 用于 Javascript 和 Node.js 的自动补全</li>
+<li>script 用于一键运行程序<h2 id="自动补全插件"><a href="#自动补全插件" class="headerlink" title="自动补全插件"></a>自动补全插件</h2>Atom 上的 Javascript 自动补全主要依赖 atom-ternjs 插件，貌似没有什么其它更好的选择。（配合 autocomplete-plus 插件使用，Atom 默认已经安装。）<br><br>安装方法与安装其它插件无异，主要有三种选择：</li>
+<li>1.图形界面<br>在 Atom 的 Settings &gt; Install 里搜索找到 atom-ternjs 并安装。<br>这种方法在国内需要科学上网。</li>
+<li>2.命令行<br>apm install atom-ternjs   这种方法在国内也需要科学上网。</li>
+<li>3.本地安装。<br><code>cd ~/.atom/packages<br>git clone git@github.com:tststs/atom-ternjs.git<br>cd atom-ternjs<br>npm install</code><h2 id="一键运行插件"><a href="#一键运行插件" class="headerlink" title="一键运行插件"></a>一键运行插件</h2>安装 script 插件，然后有两种方法可以一键运行/结束程序了：<br>1.Packages &gt; Script &gt; Run Script/Stop Script。<br>2.快捷键   运行 cmd+i   结束 ctrl + c<h2 id="配置项目"><a href="#配置项目" class="headerlink" title="配置项目"></a>配置项目</h2>atom-ternjs 插件对项目配置做了可视化，可以通过菜单来操作。<br>File &gt; Open 打开 Node.js 项目文件夹。</li>
+</ul>
+<p>Package &gt; Atom Ternjs &gt; Configure project</p>
+</blockquote>
+<p>Save &amp; Restart server 之后会在项目根目录生成 .tern-project 文件，该配置文件里常用字段：</p>
+<p>字段名    含义<br>ecmaVersion    选择 ECMAScript 版本<br>libs    browser 表示原生 js 补全，jquery 代表 jQuery 补全<br>loadEagerly    指定加载解析的 js 文件<br>dontLoad    排除加载的文件<br>plugins    ternjs 使用的插件，配置的扩展补全的库等</p>
+<p>目前插件的配置页面暂不支持 plugins 部分配置，需要手动配置。</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/30/MAC电脑下node-js环境配置/" itemprop="url">
                   MAC电脑下node.js环境配置
                 </a>
@@ -1261,7 +1500,7 @@ NSLog(@"%@",x.date);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1271,7 +1510,7 @@ NSLog(@"%@",x.date);
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
