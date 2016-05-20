@@ -229,6 +229,130 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/20/跨平台APP-对Cordova-APPCan-DCloud-APICloud四大平台的分析/" itemprop="url">
+                  跨平台APP----对Cordova,APPCan,DCloud,APICloud四大平台的分析
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-20T20:42:09+08:00" content="2016-05-20">
+              2016-05-20
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/20/跨平台APP-对Cordova-APPCan-DCloud-APICloud四大平台的分析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/20/跨平台APP-对Cordova-APPCan-DCloud-APICloud四大平台的分析/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>原文转自：<a href="http://blog.csdn.net/tangzenglei/article/details/50668914" target="_blank" rel="external">http://blog.csdn.net/tangzenglei/article/details/50668914</a></p>
+<h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><blockquote>
+<p>移动开发是未来一个很重要的IT领域，而跨平台开发将是这一领域最重要的事情。         —-谷震平</p>
+</blockquote>
+<h2 id="兵器谱"><a href="#兵器谱" class="headerlink" title="兵器谱"></a>兵器谱</h2><blockquote>
+<p>在国外，最大的是Cordova（PhoneGap，2011年广泛流行），在2012年12月开源。<br>在国内，按时间顺序，有：</p>
+</blockquote>
+<ul>
+<li>2012年，AppCan</li>
+<li>2013年，DCloud</li>
+<li>2014年9月，APICloud</li>
+</ul>
+<h2 id="二-Cordova"><a href="#二-Cordova" class="headerlink" title="二 Cordova"></a>二 Cordova</h2><blockquote>
+<p>   Cordova是Apache软件基金会的一个产品。其前身是PhoneGap，由Nitobi开发，2011年10月，Adobe收够了Nitobi，并且PhoneGap项目也被贡献给Apache软件基金会。Apache在2012年12月，发布了Cordova，截止到2015年12月，最新版面是3.0。<br>    该框架的目标用户群体是原生开发者，其设计初衷是希望用户群体能够通过跨平台开发的方法降低原生开发的成本。为此，开发人员需要安装原生开发环境，配置工程，使用HTML5、CSS3、JS和原生SDK生成应用。<br>    Cordova的优势很明显，可以使用的框架、原生接口、支持平台都很多。但是，外国人写的东西，公司使用后，出现的技术问题难以解决。同时，其在使用jQuery Mobile、Sencha Touch等前端框架的时候，有特效启动慢、页面切换慢、数据请求慢的特点。</p>
+</blockquote>
+<h2 id="三-APPCan"><a href="#三-APPCan" class="headerlink" title="三 APPCan"></a>三 APPCan</h2><blockquote>
+<p>  AppCan成立于2010年，2011年推出产品并测试，2012年正式推出品牌，2013年商业模式成型，2014年开发者注册约70w。AppCan不是开源平台，同时，企业版和部分插件是收费的。换句话说，AppCan只是一个卖软件的商业公司。我们认为：这会对其市场的占有率有着直接影响，闭源而没有垄断，所以前景不会太好。</p>
+</blockquote>
+<h2 id="四-DCloud"><a href="#四-DCloud" class="headerlink" title="四 DCloud"></a>四 DCloud</h2><blockquote>
+<p>DCloud大部分产品开源，W3C会员单位，HTML5中国产业联盟的发起公司之一，在HTML5这个行业有一定的江湖地位。旗下四款产品：HBuilder、5+ Runtime、MUI、流应用都是弥补并扩展HTML5特性的产品。该公司的理念就是解决HTML5的性能、工具、能力三方面的问题。MUI是一款不错的前端框架，性能比 jQuery Mobile、Bootstrap好很多，主要区别：<br>设计思路不同，MUI坚持用原生JS做，不依赖jQuery或者Angularjs。<br>MUI调用了5+ Runtime的底层原生加速，比不带原生加速的框架更快。<br>  但是，DCloud毕竟是个新平台，发展才2年，新产品内部存在的Bug还需要很多的测试。在其官方社区中，不少开发者也在呼吁DCloud尽快完善文档和框架。</p>
+</blockquote>
+<h2 id="五-APICloud"><a href="#五-APICloud" class="headerlink" title="五 APICloud"></a>五 APICloud</h2><blockquote>
+<p>APICloud提供原生应用的功能模块（设备访问，界面布局，开放SDK等），开发者可以通过JS调用。前端工程师负责页面布局，UI展现，及简单的交互，原生模块负责性能方面和功能实现，两者结合形成一个完整的应用。同时APICloud提供了云数据库的功能，前端不必了解PHP，Node.js等后端语言，通过JS接口或Restful API实现数据库的增删改查。<br>但是APICloud的更新速度很快，版本不太稳定。而且，它是为不懂APP开发的人士准备的，不适合科技公司和程序员。  </p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/18/hexo搭建方案（一）/" itemprop="url">
                   hexo搭建方案（一）
                 </a>
@@ -1501,7 +1625,7 @@ NSLog(@"%@",x.date);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
